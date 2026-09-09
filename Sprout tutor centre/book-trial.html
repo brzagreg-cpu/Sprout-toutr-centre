@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <section class="trial-form">
+  <h2>Book a Trial Lesson</h2>
+  <!-- Change the action here -->
+  <form action="thank-you.html" method="POST">
+    
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="teacher">Choose Teacher</label>
+    <select id="teacher" name="teacher" required>
+      <option value="">-- Select --</option>
+      <option value="Hannah">Hannah Banks</option>
+      <option value="David">David Smith</option>
+      <option value="Emma">Emma Brown</option>
+      <option value="Michael">Michael Lee</option>
+      <option value="Sophia">Sophia Davis</option>
+       <option value="Sophia">Chante</option>
+        <option value="Sophia">Kaylin</option>
+    </select>
+
+    <label for="date">Preferred Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Preferred Time</label>
+    <input type="time" id="time" name="time" required>
+
+    <button type="submit" class="book-btn">Book Trial</button>
+  </form>
+</section>
+
+   
+</body>
+</html>

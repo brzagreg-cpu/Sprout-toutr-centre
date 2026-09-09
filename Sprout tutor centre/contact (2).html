@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – Sprout Tutor Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<div class="blob-wrap">
+  <div class="blob-bg b1"></div>
+  <div class="blob-bg b2"></div>
+  <div class="blob-bg b3"></div>
+</div>
+
+<header>
+  <a class="logo" href="index.html">
+    
+    <span>Sprout</span> Tutor Centre
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="courses.html">Courses</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact (2).html" class="nav-active">Contact</a>
+  </nav>
+  <a href="book-trial.html" class="trial-btn">Book Trial ✨</a>
+</header>
+
+<div class="page">
+
+  <section class="contact-hero">
+    <div class="eyebrow">✉️ Get In Touch</div>
+    <h1>We'd Love To <span>Hear From You</span></h1>
+    <p>Whether you have a question, want to book a trial, or just want to say hello — our team is ready and happy to help.</p>
+  </section>
+
+  <div class="hours-banner">
+    <div class="hours-icon">🕐</div>
+    <div class="hours-text">
+      <strong>Fast Response Guaranteed</strong>
+      <span>We respond within 24–48 hours, Monday – Friday</span>
+    </div>
+    <div class="hours-badge">⚡ Usually within a few hours</div>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-cards">
+
+      <div class="contact-card">
+        <div class="card-icon">📞</div>
+        <div class="card-body">
+          <div class="card-label">Sales & Enrolment</div>
+          <div class="card-value">+27 81 242 1880</div>
+          <div class="card-sub">New students, packages &amp; pricing</div>
+          <a class="card-action" href="tel:+18005550192">Call now →</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">🎧</div>
+        <div class="card-body">
+          <div class="card-label">Student Support</div>
+          <div class="card-value">+1 (800) 555 – 0847</div>
+          <div class="card-sub">Scheduling, lessons &amp; account help</div>
+          <a class="card-action" href="tel:+18005550847">Call now →</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">📧</div>
+        <div class="card-body">
+          <div class="card-label">Email Us</div>
+          <div class="card-value">hello@sprouttutor.com</div>
+          <div class="card-sub">For general enquiries &amp; bookings</div>
+          <a class="card-action" href="mailto:hello@sprouttutor.com">Send email →</a>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="form-card" id="formCard">
+      <div id="formWrap">
+        <div class="form-card-label">Send A Message</div>
+        <h2>Tell us how we can help</h2>
+        <div class="form-row">
+          <div class="field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Ana">
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Silva">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="ana@example.com">
+        </div>
+        <div class="field">
+          <label for="topic">I'm enquiring about</label>
+          <select id="topic">
+            <option value="">Select a topic…</option>
+            <option>Booking a trial lesson</option>
+            <option>Course &amp; pricing information</option>
+            <option>Teacher availability</option>
+            <option>Technical support</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Tell us a little about your goals or questions…"></textarea>
+        </div>
+        <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+          <span>Send Message</span> <span>→</span>
+        </button>
+      </div>
+      <div class="success-state" id="successState">
+        <div class="success-icon">✓</div>
+        <h3>Message Received!</h3>
+        <p>Thank you for reaching out. Our team will get back to you within 24–48 hours, Monday – Friday.</p>
+        <button class="success-back" onclick="resetForm()">Send another message</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-logo">🌱 Sprout Tutor Centre</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="courses.html">Courses</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Privacy</a>
+  </div>
+  <p class="footer-copy">© 2025 Sprout Tutor Centre · Growing Confidence Through Language</p>
+</footer>
+
+<script src="contact.js"></script>
+<script>
+  function openQR() {
+    const overlay = document.getElementById('qrOverlay');
+    overlay.style.display = 'flex';
+    setTimeout(() => overlay.classList.add('active'), 10);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeQR() {
+    const overlay = document.getElementById('qrOverlay');
+    overlay.classList.remove('active');
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }, 300);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeQR();
+  });
+</script>
+</body>
+</html>
