@@ -1,5 +1,5 @@
 /* ============================================
-   index.css – Sprout Tutor Centre
+   index.css - Sprout Tutor Centre
    Homepage Styles
    ============================================ */
 
@@ -34,7 +34,7 @@ body {
 .blob-bg {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(64px);
   opacity: 0.2;
 }
 
@@ -86,8 +86,8 @@ header {
   justify-content: space-between;
   padding: 18px 7%;
   background: rgba(255, 255, 255, 0.87);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -204,6 +204,7 @@ nav a.nav-active {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -337,7 +338,7 @@ nav a.nav-active {
   gap: 20px;
   padding: 30px 7%;
   background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   position: relative;
@@ -406,7 +407,7 @@ nav a.nav-active {
 
 .feature-card {
   background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
   padding: 28px 24px;
   border-radius: 22px;
   border: 1px solid var(--border);
@@ -448,7 +449,7 @@ nav a.nav-active {
 .teachers-preview {
   padding: 64px 7%;
   background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   position: relative;
   z-index: 1;
 }
@@ -570,7 +571,7 @@ nav a.nav-active {
   border: 1.5px solid rgba(61, 11, 82, 0.2);
   padding: 10px 24px;
   border-radius: 30px;
-  transition: all 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
 .see-all-btn:hover {
@@ -805,3 +806,53 @@ footer {
     justify-content: center;
   }
 }
+
+/* ── PERFORMANCE & ACCESSIBILITY SAFEGUARDS ── */
+
+/* Keep animations available while respecting users who request less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Reduce expensive decorative effects on smaller devices. */
+@media (max-width: 600px) {
+  .blob-bg {
+    filter: blur(36px);
+  }
+
+  .bb1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .bb2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .bb3 {
+    width: 180px;
+    height: 180px;
+  }
+
+  header {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  .stats,
+  .feature-card,
+  .teachers-preview,
+  .teacher-card {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
