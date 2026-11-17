@@ -1,2 +1,0 @@
-# Sprout-toutr-centre
-Education
